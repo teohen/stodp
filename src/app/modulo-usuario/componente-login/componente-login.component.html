@@ -1,0 +1,9 @@
+<div *ngIf="loginFalhado" class="alert alert-danger margens" role="success">falha ao realizar o login devido a: <b>{{ mensagemErro }} !</b></div>
+<div class="container">
+  <form class="margens" #loginForm="ngForm" (ngSubmit)="login()">
+    <input class="form-control" [(ngModel)]="usuario.usuario" type="text" name="usuario" placeholder="usuario" required>
+    <input class="form-control" [(ngModel)]="usuario.senha" type="password" name="senha" placeholder="senha" required>
+    <button class="btn btn-primary btn-block" [disabled]="!loginForm.form.valid">entrar</button>
+    <p>não possui conta? <a href="/cadastro">cadastre-se</a> já</p>
+  </form>
+</div>

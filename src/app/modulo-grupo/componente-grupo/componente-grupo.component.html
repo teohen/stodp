@@ -1,0 +1,6 @@
+<app-componente-menu></app-componente-menu>
+<div class="card margem-menu">
+  <ul class="list-group list-group-flush" *ngFor="let grupo of grupos">
+    <a routerLink="/grupo/{{grupo.id_grupo}}"><li class="list-group-item"> {{grupo.tema}}</li></a>
+  </ul>
+</div>

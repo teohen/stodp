@@ -1,0 +1,21 @@
+<app-componente-menu></app-componente-menu>
+<div class="head-grupo">
+  <div class="titulo-head-grupo">
+    <p class="text-truncate font-weight-bold text-center margens"> {{grupo.titulo}}</p>
+  </div>
+</div>
+<div class="pre-scrollable chat">
+  <div *ngFor="let post of posts"class="mensagem card margens">
+    <h6><b> {{post.usuario}} </b></h6>
+    <p class="text-left"> {{post.post}} </p>
+  </div>
+</div>
+<div class="limite-footer"></div>
+<div class="footer">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" [(ngModel)]="post.post" name="mensagem" placeholder="mensagem" aria-label="mensagem" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+        <button class="btn btn-outline-primary" (click)="enviar()" type="button">enviar</button>
+    </div>
+  </div>
+</div>

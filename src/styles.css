@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import     "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.margens{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.margem-menu {
+    margin-top: 65px;
+}

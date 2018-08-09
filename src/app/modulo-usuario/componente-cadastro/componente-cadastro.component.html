@@ -1,0 +1,12 @@
+<div *ngIf="cadastroFalhado" class="alert alert-danger margens" role="success">falha ao realizar o cadastro, devido a: <b>{{ messagemErro }}</b></div>
+<div *ngIf="cadastroSucesso" class="alert alert-success margens" role="success">cadastro realizado com sucesso</div>
+<div class="input-group">
+  <form class="margens" #usuarioForm="ngForm" (ngSubmit)="cadastrar()">
+    <span class="input-group-addon" id="arrobaAddon">@</span>
+    <input class="form-control" type="text" [(ngModel)]="usuario.usuario" name="usuario" placeholder="usuario" aria-describedby="arrobaAddon" required>
+    <input class="form-control" type="email" [(ngModel)]="usuario.email" name="email" placeholder="email" required>
+    <input class="form-control" type="password" [(ngModel)]="usuario.senha" name="senha" placeholder="senha" required>
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="!usuarioForm.form.valid">cadastrar</button>
+    <p>já possui conta? Faça o <a href="">login</a></p>
+  </form>
+</div>

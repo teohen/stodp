@@ -1,0 +1,8 @@
+.navbar{
+    z-index: -1;
+}
+.titulo{
+    z-index: 1;
+    margin-top: -28px;
+}
+
